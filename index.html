@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PH-Tube</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <style>
+    .active {
+      background-color: #ff1f3d;
+      color: white;
+    }
+  </style>
+  <body>
+    <!-- header start  -->
+    <nav class="w-full py-6 border-b border-[#17171720]">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between">
+          <a href="/">
+            <img src="./img/Logo.png" alt="logo" />
+          </a>
+          <label
+            class="flex items-center border border-[#17171720] rounded-sm p-1 lg:p-2 gap-1 lg:gap-2 lg:w-[40%]"
+          >
+            <svg
+              class="h-[1em] text-[#FF1F3D]"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2.5"
+                fill="none"
+                stroke="currentColor"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </g>
+            </svg>
+            <input
+              type="search"
+              class="focus:outline-none border-none w-full"
+              placeholder="Search"
+            />
+          </label>
+          <button
+            class="btn btn-active btn-secondary bg-[#FF1F3D] py-[10px] px-5 hidden lg:block"
+          >
+            Blog
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- body section start  -->
+    <main class="bg-white w-full py-8">
+      <section class="container mx-auto px-4">
+        <div id="btn_container" class="flex items-center justify-center gap-5">
+          <div>
+            <button
+              onclick="loadVideos()"
+              class="btn btn-active btn-secondary bg-[#FF1F3D] py-[10px] px-5"
+            >
+              All
+            </button>
+          </div>
+        </div>
+        <div
+          id="video_container"
+          class="pt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+        ></div>
+      </section>
+    </main>
+
+    <script src="./js/node.js"></script>
+  </body>
+</html>
