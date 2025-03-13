@@ -9,8 +9,10 @@ function removeActiveClass() {
   for (let btn of activeClass) btn.classList.remove("active");
 }
 
-function loadVideos() {
-  fetch("https://openapi.programming-hero.com/api/phero-tube/videos")
+function loadVideos(searcText = "") {
+  fetch(
+    `https://openapi.programming-hero.com/api/phero-tube/videos?title=${searcText}`
+  )
     .then((response) => response.json())
     .then((data) => {
       removeActiveClass();
@@ -138,5 +140,9 @@ const displayVideos = (videos) => {
   }
 };
 
+document.getElementById("search_input").addEventListener("keyup", function (e) {
+  const input = e.target.value;
+  loadVideos(input);
+});
 loadCategories();
 loadVideos();
