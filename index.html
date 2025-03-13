@@ -66,8 +66,9 @@
         <div id="btn_container" class="flex items-center justify-center gap-5">
           <div>
             <button
+              id="btn_all"
               onclick="loadVideos()"
-              class="btn btn-active btn-secondary bg-[#FF1F3D] py-[10px] px-5"
+              class="btn btn-active py-[10px] px-5 hover:bg-[#FF1F3D] hover:text-white"
             >
               All
             </button>
@@ -79,6 +80,19 @@
         ></div>
       </section>
     </main>
+
+    <!-- modal section start  -->
+
+    <dialog id="video_details" class="modal">
+      <div class="modal-box p-2 bg-[#c4c4c4]">
+        <div id="details_container"></div>
+        <div class="modal-action">
+          <form method="dialog">
+            <button class="btn shadow-sm">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
 
     <script src="./js/node.js"></script>
   </body>
